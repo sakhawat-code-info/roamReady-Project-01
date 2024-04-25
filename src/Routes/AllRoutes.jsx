@@ -1,7 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../LayOut/Root";
 import ErrorPage from "../Pages/ErrorPage";
+import LoginPage from "../Pages/LoginPage";
 import App from "../App";
+import RegisterPage from "../Pages/RegisterPage";
+import AllTouristsSpot from "../Pages/AllTouristsSpot";
+import MyList from "../Pages/MyList";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +16,26 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <App />,
+            },
+            {
+                path: "/allTouristsSpot",
+                element: <AllTouristsSpot />,
+            },
+            {
+                path: "/addTouristsSpot",
+                element: <AllTouristsSpot />,
+            },
+            {
+                path: "/myList",
+                element: <MyList />,
+            },
+            {
+                path: "/loginPage",
+                element: <LoginPage></LoginPage>,
+            },
+            {
+                path: "/registerPage",
+                element: <RegisterPage></RegisterPage>,
             },
         ],
     },
