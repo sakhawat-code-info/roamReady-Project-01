@@ -1,7 +1,63 @@
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form"
+import UseAuth from "../AuthProvider/UseAuth";
+import Swal from "sweetalert2";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
+    const navigate = useNavigate();
+    const { loginUser, setUser, loginWithGoogle } = UseAuth();
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+    const onSubmit = (data) => {
+        loginUser(data.email, data.password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                setUser(user);
+                Swal.fire({
+                    // position: "top-end",
+                    icon: "success",
+                    title: "Login Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate('/');
+            })
+            .catch((error) => {
+                toast.error("Email OR Password is Incorrect. Try again !!!");
+                console.log(error.message);
+                // ..
+            });
+    }
+
+
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then((result) => {
+                setUser(result.user);
+                Swal.fire({
+                    // position: "top-end",
+                    icon: "success",
+                    title: "Login Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate('/');
+            }).catch((error) => {
+                console.log(error.message);
+            });
+
+    }
+
+
+
+
     return (
         <div>
             <div className="w-full h-screen font-sans bg-cover " style={{ backgroundImage: 'url(https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}>
@@ -20,7 +76,7 @@ const LoginPage = () => {
                                         </svg>
                                         Facebook
                                     </button>
-                                    <button type="button" className="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                    <button onClick={handleGoogleLogin} type="button" className="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                         <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M896 786h725q12 67 12 128 0 217-91 387.5t-259.5 266.5-386.5 96q-157 0-299-60.5t-245-163.5-163.5-245-60.5-299 60.5-299 163.5-245 245-163.5 299-60.5q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65t-173.5 176.5-64 243.5 64 243.5 173.5 176.5 238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78h-436v-264z">
                                             </path>
@@ -29,7 +85,8 @@ const LoginPage = () => {
                                     </button>
                                 </div>
                                 <div className="mt-8">
-                                    <form action="#" autoComplete="off">
+                                    {/* autoComplete="off" */}
+                                    <form onSubmit={handleSubmit(onSubmit)} >
                                         <div className="flex flex-col mb-2">
                                             <div className="flex relative ">
                                                 <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -38,8 +95,10 @@ const LoginPage = () => {
                                                         </path>
                                                     </svg>
                                                 </span>
-                                                <input type="text" id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email" />
+                                                <input {...register("email", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email" />
+
                                             </div>
+                                            {errors.email && <span className="text-red-800 ml-2">Email is required</span>}
                                         </div>
                                         <div className="flex flex-col mb-6">
                                             <div className="flex relative ">
@@ -49,8 +108,10 @@ const LoginPage = () => {
                                                         </path>
                                                     </svg>
                                                 </span>
-                                                <input type="password" id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password" />
+                                                <input {...register("password", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password" />
+
                                             </div>
+                                            {errors.password && <span className="text-red-800 ml-2">Password is required</span>}
                                         </div>
                                         <div className="flex items-center mb-6 -mt-4">
                                             <div className="flex ml-auto">
@@ -79,7 +140,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div>
-
+            <ToastContainer />
         </div>
     );
 };
