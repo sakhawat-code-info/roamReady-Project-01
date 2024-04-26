@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
     const navigate = useNavigate();
-    const { createUser, setUser } = UseAuth();
+    const { createUser, setUser, updateProfileByNameAndPhotoURL } = UseAuth();
 
     const {
         register,
@@ -36,7 +36,15 @@ const RegisterPage = () => {
         createUser(data.email, data.password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                setUser(user);
+                console.log(user)
+                updateProfileByNameAndPhotoURL(data.name, data.photoURL)
+                    .then(() => {
+
+                    }).catch((error) => {
+                        console.log(error)
+                    });
+
+                // setUser(user);
                 Swal.fire({
                     // position: "top-end",
                     icon: "success",
@@ -44,7 +52,7 @@ const RegisterPage = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/');
+                navigate('/loginPage');
             })
             .catch((error) => {
                 console.log(error.message);
@@ -87,8 +95,8 @@ const RegisterPage = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input {...register("photoUrl", { required: true })} placeholder="Photo URL" className="input input-bordered" />
-                                {errors.photoUrl && <span className="text-red-800 ml-2">Photo URL is required</span>}
+                                <input {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
+                                {errors.photoURL && <span className="text-red-800 ml-2">Photo URL is required</span>}
                             </div>
 
 
