@@ -7,6 +7,7 @@ import RegisterPage from "../Pages/RegisterPage";
 import AllTouristsSpot from "../Pages/AllTouristsSpot";
 import MyList from "../Pages/MyList";
 import ProtectedRoutes from "../Routes/ProtectedRoutes";
+import AddTouristsSpot from "../Pages/AddTouristsSpot";
 
 
 
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/addTouristsSpot",
-                element: <ProtectedRoutes><AllTouristsSpot /></ProtectedRoutes>,
+                element: <ProtectedRoutes><AddTouristsSpot /></ProtectedRoutes>,
             },
             {
                 path: "/myList",

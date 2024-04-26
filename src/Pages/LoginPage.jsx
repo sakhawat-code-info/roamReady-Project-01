@@ -98,7 +98,7 @@ const LoginPage = () => {
                                                         </path>
                                                     </svg>
                                                 </span>
-                                                <input {...register("email", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email" />
+                                                <input {...register("email", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Your email" />
 
                                             </div>
                                             {errors.email && <span className="text-red-800 ml-2">Email is required</span>}
@@ -111,7 +111,7 @@ const LoginPage = () => {
                                                         </path>
                                                     </svg>
                                                 </span>
-                                                <input {...register("password", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password" />
+                                                <input {...register("password", { required: true })} id="sign-in-email" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Your password" />
 
                                             </div>
                                             {errors.password && <span className="text-red-800 ml-2">Password is required</span>}
@@ -124,7 +124,7 @@ const LoginPage = () => {
                                             </div>
                                         </div>
                                         <div className="flex w-full">
-                                            <button type="submit" className="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                            <button type="submit" className="py-2 px-4  bg-[#0f6780] hover:bg-white hover:text-[#0f6780] focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg border-2 border-[#0f6780]">
                                                 Login
                                             </button>
                                         </div>

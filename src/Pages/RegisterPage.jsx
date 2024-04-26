@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
     const navigate = useNavigate();
-    const { createUser, setUser, updateProfileByNameAndPhotoURL } = UseAuth();
+    const { createUser, updateProfileByNameAndPhotoURL } = UseAuth();
 
     const {
         register,
@@ -17,6 +17,8 @@ const RegisterPage = () => {
 
     const onSubmit = (data) => {
 
+
+        // password checking 
         if (data.password.length < 6) {
             toast.error('Minimum 6 digits required');
             return;
@@ -29,10 +31,7 @@ const RegisterPage = () => {
         }
 
 
-
-
-
-
+        // register data taking 
         createUser(data.email, data.password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -48,7 +47,7 @@ const RegisterPage = () => {
                 Swal.fire({
                     // position: "top-end",
                     icon: "success",
-                    title: "Registration Successful",
+                    title: "Registration Successful. Please Login",
                     showConfirmButton: false,
                     timer: 1500
                 });

@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 
 
-
+https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp
 
 <div className="flex items-center justify-center gap-4">
  <img className="h-20 w-20 rounded-full" src="https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp" alt="" />
