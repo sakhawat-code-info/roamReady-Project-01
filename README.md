@@ -20,3 +20,21 @@ bg-[#0f6780]
 [#0f6780]
 
 You don&#x27;t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quran e koto bar asse namaj porar kotha 
+1 -> bakara ayat number 21

@@ -10,17 +10,17 @@ const AddTouristsSpot = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        // console.log(
-        //     data.country_Name,
-        //     data.location,
-        //     data.tourists_spot_name,
-        //     data.locationImgLink,
-        //     data.shortDescription,
-        //     data.seasonality,
-        //     data.travel_time,
-        //     data.totalVisitorsPerYear,
-        //     data.average_cost,
-        // )
+        console.log(
+            //     data.country_Name,
+            //     data.location,
+            //     data.tourists_spot_name,
+            //     data.locationImgLink,
+            //     data.shortDescription,
+            //     data.seasonality,
+            //     data.travel_time,
+            //     data.totalVisitorsPerYear,
+            data.average_cost,
+        )
 
     }
 
@@ -55,26 +55,26 @@ const AddTouristsSpot = () => {
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("country_Name", { required: true })} id="contact-form-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Country Name" />
+                                        <input {...register("country_Name", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Country Name" />
                                         {errors.country_Name && <span className="text-red-800 ml-2">Country Name is required</span>}
                                     </div>
                                 </div>
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("location", { required: true })} id="contact-form-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location" />
+                                        <input {...register("location", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location" />
                                         {errors.location && <span className="text-red-800 ml-2">Location is required</span>}
                                     </div>
                                 </div>
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("tourists_spot_name", { required: true })} id="contact-form-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Tourists Spot Name" />
+                                        <input {...register("tourists_spot_name", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Tourists Spot Name" />
                                         {errors.tourists_spot_name && <span className="text-red-800 ml-2">Tourists Spot Name is required</span>}
                                     </div>
                                 </div>
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("locationImgLink", { required: true })} id="contact-form-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" />
+                                        <input {...register("locationImgLink", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" />
                                         {errors.locationImgLink && <span className="text-red-800 ml-2">Location Img Link is required</span>}
                                     </div>
                                 </div>
@@ -91,26 +91,26 @@ const AddTouristsSpot = () => {
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("seasonality", { required: true })} id="contact-form-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Which season is suitable ? " />
+                                        <input {...register("seasonality", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Which season is suitable ? " />
                                         {errors.seasonality && <span className="text-red-800 ml-2">Season Name is required</span>}
                                     </div>
                                 </div>
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("travel_time", { required: true })} id="contact-form-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Travel Time" />
+                                        <input {...register("travel_time", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Travel Time" />
                                         {errors.travel_time && <span className="text-red-800 ml-2">Travel Time is required</span>}
                                     </div>
                                 </div>
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("totalVisitorsPerYear", { required: true })} id="contact-form-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Total Visitors Per Year" />
+                                        <input {...register("totalVisitorsPerYear", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Total Visitors Per Year" />
                                         {errors.totalVisitorsPerYear && <span className="text-red-800 ml-2">Total Visitors Per Year</span>}
                                     </div>
                                 </div>
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("average_cost", { required: true })} id="contact-form-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Average Cost" />
+                                        <input {...register("average_cost", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Average Cost" />
                                         {errors.average_cost && <span className="text-red-800 ml-2">Average Cost</span>}
                                     </div>
                                 </div>
