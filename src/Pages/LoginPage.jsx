@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import UseAuth from "../AuthProvider/UseAuth";
 import Swal from "sweetalert2";
@@ -7,6 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
     const navigate = useNavigate();
+    const locationTracking = useLocation();
+    const navigateToLocation = locationTracking?.state || '/';
+    console.log(locationTracking);
     const { loginUser, setUser, loginWithGoogle } = UseAuth();
 
     const {
@@ -27,7 +30,7 @@ const LoginPage = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/');
+                navigate(navigateToLocation);
             })
             .catch((error) => {
                 toast.error("Email OR Password is Incorrect. Try again !!!");
@@ -48,7 +51,7 @@ const LoginPage = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/');
+                navigate(navigateToLocation);
             }).catch((error) => {
                 console.log(error.message);
             });
