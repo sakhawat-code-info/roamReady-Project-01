@@ -55,6 +55,9 @@ const AddTouristsSpot = () => {
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
+                                        {/* <div className="label">
+                                            <span className="label-text ml-3">What is your name?</span>
+                                        </div> */}
                                         <input {...register("country_Name", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Country Name" />
                                         {errors.country_Name && <span className="text-red-800 ml-2">Country Name is required</span>}
                                     </div>

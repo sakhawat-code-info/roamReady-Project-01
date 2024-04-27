@@ -1,12 +1,16 @@
 
 import './App.css'
+import Slider from './Components/Slider/Slider'
+
 
 function App() {
 
 
   return (
     <>
-      <h1>App Body</h1>
+      <div className='m-10'>
+        <Slider></Slider>
+      </div>
     </>
   )
 }
