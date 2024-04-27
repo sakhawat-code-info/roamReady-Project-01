@@ -7,7 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
     const navigate = useNavigate();
-    const { createUser, updateProfileByNameAndPhotoURL } = UseAuth();
+    const { createUser, updateProfileByNameAndPhotoURL, setUser } = UseAuth();
+
 
     const {
         register,
@@ -34,8 +35,8 @@ const RegisterPage = () => {
         // register data taking 
         createUser(data.email, data.password)
             .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user)
+                const userInfo = userCredential.user;
+                // console.log(userInfo)
                 updateProfileByNameAndPhotoURL(data.name, data.photoURL)
                     .then(() => {
 
@@ -43,7 +44,7 @@ const RegisterPage = () => {
                         console.log(error)
                     });
 
-                // setUser(user);
+                setUser(userInfo);
                 Swal.fire({
                     // position: "top-end",
                     icon: "success",

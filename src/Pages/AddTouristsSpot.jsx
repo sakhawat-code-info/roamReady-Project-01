@@ -1,26 +1,88 @@
+
 import { useForm } from "react-hook-form"
+import UseAuth from "../AuthProvider/UseAuth";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 const AddTouristsSpot = () => {
 
+    const { user } = UseAuth();
+    const navigate = useNavigate();
+
+
+
+
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
-        console.log(
-            //     data.country_Name,
-            //     data.location,
-            //     data.tourists_spot_name,
-            //     data.locationImgLink,
-            //     data.shortDescription,
-            //     data.seasonality,
-            //     data.travel_time,
-            //     data.totalVisitorsPerYear,
-            data.average_cost,
-        )
+
+        const country_Name = data.country_Name;
+        const location = data.location;
+        const tourists_spot_name = data.tourists_spot_name;
+        const locationImgLink = data.locationImgLink;
+        const shortDescription = data.shortDescription;
+        const seasonality = data.seasonality;
+        const travel_time = data.travel_time;
+        const totalVisitorsPerYear = data.totalVisitorsPerYear;
+        const average_cost = data.average_cost;
+        const userName = user.displayName;
+        const userEmail = user.email;
+        const userCreatePostDateAndTime = user.metadata.lastSignInTime;
+
+
+        const addTouristSpotData = {
+            country_Name,
+            location,
+            tourists_spot_name,
+            locationImgLink,
+            shortDescription,
+            seasonality,
+            travel_time,
+            totalVisitorsPerYear,
+            average_cost,
+            userName,
+            userEmail,
+            userCreatePostDateAndTime
+        }
+
+        // console.log(addTouristSpotData);
+        fetch('http://localhost:5000/addTouristSpotData', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(addTouristSpotData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        // position: "top-end",
+                        icon: "success",
+                        title: "Data Saved Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    reset({
+                        country_Name: "",
+                        location: "",
+                        tourists_spot_name: "",
+                        locationImgLink: "",
+                        shortDescription: "",
+                        seasonality: "",
+                        travel_time: "",
+                        totalVisitorsPerYear: "",
+                        average_cost: ""
+                    });
+                }
+            })
+
 
     }
 
@@ -85,7 +147,7 @@ const AddTouristsSpot = () => {
 
                                 <div className="col-span-2">
                                     <label className="text-gray-700" >
-                                        <textarea {...register("shortDescription", { required: false })} className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" id="comment" placeholder="Enter your short description" name="comment" rows="5" cols="40">
+                                        <textarea {...register("shortDescription", { required: false })} className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Enter your short description" name="comment" rows="5" cols="40" >
                                         </textarea>
                                         {/* {errors.shortDescription && <span className="text-red-800 ml-2">Short description is required</span>} */}
                                     </label>

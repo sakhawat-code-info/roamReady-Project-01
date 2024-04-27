@@ -2,7 +2,7 @@
 const LetsGoWithUs = () => {
     return (
         <div>
-            <div>
+            <div className="container mx-auto">
                 <div className="w-full dark:bg-gray-500 bg-cover bg-center" style={{ backgroundImage: 'url(https://source.unsplash.com/random/640x480)' }}>
                     <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
                         <h1 className="text-5xl antialiased font-semibold leading-none text-center dark:text-gray-800">Get Our Updates</h1>

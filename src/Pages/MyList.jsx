@@ -1,7 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const MyList = () => {
@@ -269,7 +269,7 @@ const MyList = () => {
 
                                         <div className="col-span-2 text-center my-2">
                                             <button className="btn  transition ease-in duration-200 uppercase rounded-full hover:bg-[#0f6780] hover:text-white border-2 border-[#0f6780] focus:outline-none">
-                                                close
+                                                Go Back
                                             </button>
                                         </div>
                                     </div>

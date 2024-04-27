@@ -9,7 +9,7 @@ const LoginPage = () => {
     const navigate = useNavigate();
     const locationTracking = useLocation();
     const navigateToLocation = locationTracking?.state || '/';
-    console.log(locationTracking);
+    // console.log(locationTracking);
     const { loginUser, setUser, loginWithGoogle } = UseAuth();
 
     const {

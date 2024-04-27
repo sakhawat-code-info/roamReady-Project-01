@@ -10,6 +10,8 @@ import Slider from './Components/Slider/Slider'
 function App() {
 
 
+
+
   return (
     <>
       <div className='m-10'>
