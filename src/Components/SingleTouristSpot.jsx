@@ -94,7 +94,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                         </Link>
 
 
-                        SingleTouristSpotData
+                        {/* SingleTouristSpotData */}
                     </div>
                 </div>
             </div>

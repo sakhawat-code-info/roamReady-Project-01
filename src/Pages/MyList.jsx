@@ -1,10 +1,26 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 import { useForm } from "react-hook-form"
+import UseAuth from "../AuthProvider/UseAuth";
+import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
 
 const MyList = () => {
+    const { user } = UseAuth() || {};
+    const [dataByEmail, setDataByEmail] = useState([]);
+
+
+
+    // for load data through email 
+    useEffect(() => {
+        fetch(`http://localhost:5000/myListData/${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setDataByEmail(data);
+            })
+    }, [user])
+
 
 
     const {
@@ -79,59 +95,65 @@ const MyList = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
 
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                11/12/2025
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                Dhaka
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                DU
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                Sundorbon er best heading
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                Winter
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                70K+
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                3000 tk
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                    {
+                                        dataByEmail.map(singleData => <tr key={singleData._id}>
 
-                                            <button onClick={() => document.getElementById('my_modal_1').showModal()} className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
-                                                <CiEdit size={20} />
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    11/12/2025
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    Dhaka
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    DU
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    Sundorbon er best heading
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    Winter
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    70K+
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    3000 tk
+                                                </p>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
 
-                                            </button>
+                                                <button onClick={() => document.getElementById('my_modal_1').showModal()} className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                                                    <CiEdit size={20} />
 
-                                        </td>
-                                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                </button>
 
-                                            <button className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
-                                                <MdOutlineDeleteForever size={20} />
-                                            </button>
+                                            </td>
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
 
-                                        </td>
-                                    </tr>
+                                                <button className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                                                    <MdOutlineDeleteForever size={20} />
+                                                </button>
+
+                                            </td>
+                                        </tr>)
+                                    }
+
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -140,10 +162,8 @@ const MyList = () => {
             </div>
 
 
-
-
             {/* Open the modal using document.getElementById('ID').showModal() method */}
-            <button className="btn" >open modal</button>
+
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box">
 
@@ -284,6 +304,8 @@ const MyList = () => {
                     </div>
                 </div>
             </dialog >
+
+
 
 
 

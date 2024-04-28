@@ -6,7 +6,7 @@ const AllTouristsSpot = () => {
 
     const touristDataFromDB = useLoaderData();
 
-    console.log(touristDataFromDB);
+    // console.log(touristDataFromDB);
 
 
     return (
