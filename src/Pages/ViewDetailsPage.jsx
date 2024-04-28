@@ -44,7 +44,7 @@ const ViewDetailsPage = () => {
                                     {tourists_spot_name}
                                 </h4>
 
-                                <p className="text-base text-gray-500 mt-3">{userCreatePostDateAndTime.slice(0, 17)} — Written by {userName}</p>
+                                <p className="text-base text-gray-500 mt-3">{userCreatePostDateAndTime?.slice(0, 17)} — Written by {userName}</p>
                             </div>
                             <div className="flex items-center mb-6 space-x-2">
                                 <p className="text-gray-600">Share this article</p>
@@ -129,8 +129,7 @@ const ViewDetailsPage = () => {
 
 
                             <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, ut. Ea nihil praesentium distinctio fugit recusandae nulla amet, maxime ex fugiat magnam dolorum, neque, obcaecati tempore quia unde itaque magni dolor doloribus asperiores. Modi quod distinctio voluptates cupiditate a neque! Sed et inventore consequatur assumenda ratione magnam possimus ipsum error eum cupiditate rerum quisquam dolor perferendis, quas doloribus hic soluta atque odio delectus animi ullam modi minus. Libero, maiores odio animi amet veritatis accusantium delectus, doloremque nemo fugiat deleniti ducimus quos laborum iure rem porro, ipsa odit. Sunt officiis perferendis impedit, deserunt itaque enim autem omnis distinctio illum delectus quam!
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, ut. Ea nihil praesentium distinctio fugit recusandae nulla amet, maxime
+                                {shortDescription}
                             </p>
                         </div>
 
@@ -139,7 +138,7 @@ const ViewDetailsPage = () => {
                         <div className="relative mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
                             <div className="relative space-y-4">
                                 <div className="flex items-end justify-center space-x-4 lg:justify-start">
-                                    <img className="w-32 rounded-lg shadow-lg md:w-56" width="200" src="https://img.freepik.com/free-photo/smiley-woman-with-red-baggage-medium-shot_23-2149380134.jpg?t=st=1714147538~exp=1714151138~hmac=91328cd485162d81905615da53fff25fd08c48f1b81ff58f666ba11d85572a2b&w=360" alt="1" />
+                                    <img className="w-32 rounded-lg shadow-lg md:w-56" width="200" src={locationImgLink} alt="1" />
                                     <img className="w-40 rounded-lg shadow-lg md:w-64" width="260" src="https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2023/07/travel-insurance-woman-on-boat.jpeg.jpg" alt="2" />
                                 </div>
                                 <div className="flex items-start justify-center ml-12 space-x-4 lg:justify-start">

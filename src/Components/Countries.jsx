@@ -1,0 +1,145 @@
+
+
+const Countries = () => {
+    return (
+        <div>
+            <div className="w-full p-4 bg-white">
+                <div className="flex items-end justify-between mb-3 header">
+                    <div className="title">
+                        <p className="mb-4 text-4xl font-bold text-gray-800">
+                            Countries
+                        </p>
+                        {/* <p className="text-2xl font-light text-gray-400">
+                            All article are verified by 2 experts and valdiate by the CTO
+                        </p> */}
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+
+
+
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Bangladesh
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Sundarban, Cox’s Bazar, Rangamati, Bandarban, Saint
+                                    Martin’s Island
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Thailand
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Bangkok, Chiang Mai, Ayu�haya, Phuket, Phi Phi Islands
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Indonesia
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Bali, Borobudur Temple, Komodo National Park, Raja Ampat Islands, Yogyakarta
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Malaysia
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Kuala Lumpur, Langkawi, Penang, Cameron Highlands,
+                                    Taman Negara National Park
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Vietnam
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Ha Long Bay, Ho Chi Minh City, Hoi An Ancient Town, Phong
+                                    Nha Caves, Mekong Delta
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                        <a href="#" className="block w-full h-full">
+                            <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
+                            <div className="w-full p-4 bg-white dark:bg-gray-800">
+
+                                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                    Cambodia
+                                </p>
+                                <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                    <span className="font-semibold">Best Places : </span>Angkor Wat, Siem Reap, Phnom Penh, Kep, Bokor National
+                                    Park
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    );
+};
+
+export default Countries;

@@ -1,12 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import SingleTouristSpot from "../Components/SingleTouristSpot";
+import { useState } from "react";
 
 
 const AllTouristsSpot = () => {
 
     const touristDataFromDB = useLoaderData();
 
-    // console.log(touristDataFromDB);
+    const [allData, setAllData] = useState(touristDataFromDB);
+
+    console.log(allData)
+
+
+    const sortBy = (sortData) => {
+
+        if (sortData === "average cost") {
+            const sortByNumber = [].concat(allData).sort((a, b) => b.average_cost - a.average_cost);
+            setAllData(sortByNumber);
+        }
+    };
 
 
     return (
@@ -25,8 +37,8 @@ const AllTouristsSpot = () => {
                     <div className="lg:mt-0 lg:flex-shrink-0">
                         <div className=" inline-flex rounded-md shadow">
                             <select className="select select-bordered select-xs w-full max-w-xs">
-                                <option disabled selected>Tiny</option>
-                                <option>Tiny Apple</option>
+                                <option disabled selected>Sort</option>
+                                <option onClick={() => sortBy("average cost")}>Average Cost</option>
                                 <option>Tiny Orange</option>
                                 <option>Tiny Tomato</option>
                             </select>
@@ -41,7 +53,7 @@ const AllTouristsSpot = () => {
 
 
                     {
-                        touristDataFromDB.map(SingleTouristSpotData => <SingleTouristSpot
+                        allData?.map(SingleTouristSpotData => <SingleTouristSpot
                             key={SingleTouristSpotData._id}
                             SingleTouristSpotData={SingleTouristSpotData}
                         ></SingleTouristSpot>)

@@ -43,6 +43,30 @@ const Slider = () => {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper"
             >
+                <SwiperSlide>
+                    <img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" />
+                    <div className="swiper-wrapper">
+
+                        <div className="swiper-slide">
+                            <div className="title" data-swiper-parallax="-100">Slide 1</div>
+                            <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                            <div className="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                                <p>Lorem ipsum dolor sit amet, ...</p>
+                            </div>
+                        </div>
+
+                        <div className="swiper-slide">
+                            <div className="title" data-swiper-parallax="-100">Slide 1</div>
+                            <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                            <div className="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                                <p>Lorem ipsum dolor sit amet, ...</p>
+                            </div>
+                        </div>
+
+                        ...
+                    </div>
+                </SwiperSlide>
+                {/* <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" /></SwiperSlide>
@@ -52,9 +76,7 @@ const Slider = () => {
                 <SwiperSlide><img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://www.tailwind-kit.com/images/landscape/8.svg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1714211950~exp=1714215550~hmac=70faff82510389102c67cf680ce9958833affd3c94d751e8fb34231652280eae&w=1060" alt="" /></SwiperSlide> */}
 
 
                 <div className="autoplay-progress" slot="container-end">

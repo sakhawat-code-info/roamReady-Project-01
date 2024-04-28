@@ -114,7 +114,7 @@ const UpdateTouristSpotDataPage = () => {
                                         <p className="text-sm text-gray-500">{user?.metadata.lastSignInTime.slice(5, 17)}</p>
                                     </div>
                                 </a>
-                                <h1 className="text-4xl font-semibold text-center text-gray-900">Add Tourists Spot</h1>
+                                <h1 className="text-4xl font-semibold text-center text-gray-900">Update Tourists Spot Data</h1>
                             </div>
                             <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
 
@@ -160,7 +160,7 @@ const UpdateTouristSpotDataPage = () => {
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input type="text" name="locationImgLink" defaultValue="locationImgLink" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" required />
+                                        <input type="text" name="locationImgLink" defaultValue={locationImgLink} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" required />
                                     </div>
                                 </div>
 
@@ -248,7 +248,7 @@ const UpdateTouristSpotDataPage = () => {
 
                                 <div className="col-span-2 text-center mt-7">
                                     <button className=" px-12 py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-[#0f6780] hover:text-white border-2 border-[#0f6780] focus:outline-none">
-                                        Add
+                                        Update
                                     </button>
                                 </div>
 
