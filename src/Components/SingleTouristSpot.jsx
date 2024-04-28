@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const SingleTouristSpot = ({ SingleTouristSpotData }) => {
 
     const {
+        _id,
         tourists_spot_name,
         locationImgLink,
         average_cost,
@@ -84,7 +85,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                     </ul>
 
                     <div className="px-6 py-4 flex items-center justify-center">
-                        <Link>
+                        <Link to={`/viewDetailsPage/${_id}`}>
                             <button className=" px-6 py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                                 View Details
                             </button>

@@ -9,6 +9,7 @@ import MyList from "../Pages/MyList";
 import ProtectedRoutes from "../Routes/ProtectedRoutes";
 import AddTouristsSpot from "../Pages/AddTouristsSpot";
 import UpdateTouristSpotDataPage from "../Pages/UpdateTouristSpotDataPage";
+import ViewDetailsPage from "../Pages/ViewDetailsPage";
 
 
 
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
                 path: "/allTouristsSpot",
                 element: <AllTouristsSpot />,
                 loader: () => fetch('http://localhost:5000/addTouristSpotData'),
+            },
+            {
+                path: "/viewDetailsPage/:showDetails",
+                element: <ProtectedRoutes><ViewDetailsPage /></ProtectedRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/findSingleDataForUpdate/${params.showDetails}`)
             },
             {
                 path: "/addTouristsSpot",

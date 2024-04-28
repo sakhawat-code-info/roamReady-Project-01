@@ -1,6 +1,34 @@
+import { useLoaderData } from "react-router-dom";
+
 
 
 const ViewDetailsPage = () => {
+
+    const detailsData = useLoaderData();
+
+    const {
+        country_Name,
+        location,
+        tourists_spot_name,
+        locationImgLink,
+        shortDescription,
+        seasonality,
+        travel_time,
+        totalVisitorsPerYear,
+        average_cost,
+        userName,
+        userEmail,
+        userCreatePostDateAndTime
+    } = detailsData;
+
+
+
+
+
+
+
+
+
     return (
         <div>
             <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:my-20">
@@ -8,27 +36,21 @@ const ViewDetailsPage = () => {
                     <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div className="ml-auto lg:col-start-2 lg:max-w-2xl">
 
-
-
-
                             <div className="pb-3 mb-3 border-b border-gray-200">
                                 <div className="flex items-center justify-start gap-5">
                                     <p className="text-base font-semibold leading-6 text-indigo-500 uppercase">
-                                        country_Name
+                                        {country_Name}
                                     </p>
                                     <div className="flex space-x-2">
-                                        <a className="text-gray-900 bg-gray-100 badge hover:bg-gray-200" href="#">Location</a>
+                                        <a className="text-gray-900 bg-gray-100 badge hover:bg-gray-200" href="#">{location}</a>
                                     </div>
                                 </div>
 
-
-
-
                                 <h4 className=" text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
-                                    tourists_spot_name Interactivity between .
+                                    {tourists_spot_name}
                                 </h4>
 
-                                <p className="text-base text-gray-500 mt-3">January 18, 2021 — Written by Praveen Juge</p>
+                                <p className="text-base text-gray-500 mt-3">{userCreatePostDateAndTime.slice(0, 17)} — Written by {userName}</p>
                             </div>
                             <div className="flex items-center mb-6 space-x-2">
                                 <p className="text-gray-600">Share this article</p>
@@ -66,7 +88,7 @@ const ViewDetailsPage = () => {
                                             </svg>
                                         </span>
                                         <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                            winter season
+                                            {seasonality}
                                         </span>
                                     </div>
                                 </li>
@@ -79,7 +101,7 @@ const ViewDetailsPage = () => {
                                             </svg>
                                         </span>
                                         <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                            7 days open travel_time
+                                            {travel_time} days open
                                         </span>
                                     </div>
                                 </li>
@@ -92,7 +114,7 @@ const ViewDetailsPage = () => {
                                             </svg>
                                         </span>
                                         <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                            70k Visitors / Year
+                                            {totalVisitorsPerYear}k Visitors / Year
                                         </span>
                                     </div>
                                 </li>
@@ -105,7 +127,7 @@ const ViewDetailsPage = () => {
                                             </svg>
                                         </span>
                                         <span className="ml-4 text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
-                                            average_cost 3000 tk
+                                            {average_cost} tk
                                         </span>
                                     </div>
                                 </li>

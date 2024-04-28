@@ -99,12 +99,12 @@ const AddTouristsSpot = () => {
 
                             <div className=" mb-10 text-3xl ">
                                 <a className="flex items-center text-gray-700" href="#">
-                                    <div className="avatar w-10 rounded-full">
-                                        <img className="w-10 rounded-full" src="https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp" alt="Photo of Praveen Juge" />
+                                    <div className="avatar w-10 h-10 rounded-full">
+                                        <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="Photo of Praveen Juge" />
                                     </div>
                                     <div className="ml-2">
-                                        <p className="text-sm font-semibold text-gray-800">Praveen Juge</p>
-                                        <p className="text-sm text-gray-500">Jan 02 2021</p>
+                                        <p className="text-sm font-semibold text-gray-800">{user?.displayName}</p>
+                                        <p className="text-sm text-gray-500">{user?.metadata.lastSignInTime.slice(5, 17)}</p>
                                     </div>
                                 </a>
                                 <h1 className="text-4xl font-semibold text-center text-gray-900">Add Tourists Spot</h1>
