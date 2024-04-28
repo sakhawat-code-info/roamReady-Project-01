@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 const SingleTouristSpot = ({ SingleTouristSpotData }) => {
 
     const {
-
-
         tourists_spot_name,
         locationImgLink,
         average_cost,
@@ -21,7 +19,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
         <div>
             <div className="flex px-3 py-3">
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                    <img className="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />
+                    <img className="w-full md:h-60" src={locationImgLink} alt="Sunset in the mountains" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
                         {/* <p className="text-gray-700 text-base">

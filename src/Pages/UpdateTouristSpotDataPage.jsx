@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form"
 import UseAuth from "../AuthProvider/UseAuth";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const UpdateTouristSpotDataPage = () => {
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -77,24 +78,25 @@ const UpdateTouristSpotDataPage = () => {
             .then(data => {
                 if (data.matchedCount) {
                     Swal.fire({
-                        // position: "top-end",
-                        icon: "success",
-                        title: "Data updated Successfully",
-                        showConfirmButton: false,
-                        timer: 1500
+                        title: "Do you want to save the changes?",
+                        showDenyButton: true,
+                        showCancelButton: true,
+                        confirmButtonText: "Save",
+                        denyButtonText: `Don't save`
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            Swal.fire("Saved!", "", "success");
+                            navigate('/myList');
+                        } else if (result.isDenied) {
+                            Swal.fire("Changes are not saved", "", "info");
+                            navigate('/myList');
+                        }
                     });
-                    // reset({
-                    //     country_Name: "",
-                    //     location: "",
-                    //     tourists_spot_name: "",
-                    //     locationImgLink: "",
-                    //     shortDescription: "",
-                    //     seasonality: "",
-                    //     travel_time: "",
-                    //     totalVisitorsPerYear: "",
-                    //     average_cost: ""
-                    // });
+
                 }
+
+
             })
 
 

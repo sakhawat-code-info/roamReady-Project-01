@@ -3,6 +3,7 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 import UseAuth from "../AuthProvider/UseAuth";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 // import { Link } from "react-router-dom";
 
 const MyList = () => {
@@ -19,6 +20,46 @@ const MyList = () => {
                 setDataByEmail(data);
             })
     }, [user])
+
+    const handleDataDelete = (id) => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/singleDataDelete/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
+                        if (data.deletedCount === 1) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                        const remaining = dataByEmail.filter(item => item._id != id);
+                        setDataByEmail(remaining);
+                    })
+
+
+            }
+        });
+
+    }
+
+
+
+
 
 
     return (
@@ -110,7 +151,7 @@ const MyList = () => {
                                             </td>
                                             <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
 
-                                                <button className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                                                <button onClick={() => handleDataDelete(singleData._id)} className="flex items-center p-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                                                     <MdOutlineDeleteForever size={20} />
                                                 </button>
 
