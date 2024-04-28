@@ -2,13 +2,13 @@
 import { useForm } from "react-hook-form"
 import UseAuth from "../AuthProvider/UseAuth";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 const AddTouristsSpot = () => {
 
     const { user } = UseAuth();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
 

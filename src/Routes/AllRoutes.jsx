@@ -8,6 +8,7 @@ import AllTouristsSpot from "../Pages/AllTouristsSpot";
 import MyList from "../Pages/MyList";
 import ProtectedRoutes from "../Routes/ProtectedRoutes";
 import AddTouristsSpot from "../Pages/AddTouristsSpot";
+import UpdateTouristSpotDataPage from "../Pages/UpdateTouristSpotDataPage";
 
 
 
@@ -32,6 +33,11 @@ export const router = createBrowserRouter([
             {
                 path: "/addTouristsSpot",
                 element: <ProtectedRoutes><AddTouristsSpot /></ProtectedRoutes>,
+            },
+            {
+                path: "/updateTouristSpotDataPage/:needUpdateThisId",
+                element: <ProtectedRoutes><UpdateTouristSpotDataPage /></ProtectedRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/findSingleDataForUpdate/${params.needUpdateThisId}`)
             },
             {
                 path: "/myList",
