@@ -1,5 +1,5 @@
 
-import { useForm } from "react-hook-form"
+
 import UseAuth from "../AuthProvider/UseAuth";
 import Swal from "sweetalert2";
 // import { useNavigate } from "react-router-dom";
@@ -13,24 +13,22 @@ const AddTouristsSpot = () => {
 
 
 
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
-    } = useForm()
 
-    const onSubmit = (data) => {
 
-        const country_Name = data.country_Name;
-        const location = data.location;
-        const tourists_spot_name = data.tourists_spot_name;
-        const locationImgLink = data.locationImgLink;
-        const shortDescription = data.shortDescription;
-        const seasonality = data.seasonality;
-        const travel_time = data.travel_time;
-        const totalVisitorsPerYear = data.totalVisitorsPerYear;
-        const average_cost = data.average_cost;
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const country_Name = form.country_Name.value;
+        const location = form.location.value;
+        const tourists_spot_name = form.tourists_spot_name.value;
+        const locationImgLink = form.locationImgLink.value;
+        const shortDescription = form.shortDescription.value;
+        const seasonality = form.seasonality.value;
+        const travel_time = form.travel_time.value;
+        const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
+        const average_cost = form.average_cost.value;
         const userName = user.displayName;
         const userEmail = user.email;
         const userCreatePostDateAndTime = user.metadata.lastSignInTime;
@@ -69,33 +67,22 @@ const AddTouristsSpot = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    reset({
-                        country_Name: "",
-                        location: "",
-                        tourists_spot_name: "",
-                        locationImgLink: "",
-                        shortDescription: "",
-                        seasonality: "",
-                        travel_time: "",
-                        totalVisitorsPerYear: "",
-                        average_cost: ""
-                    });
                 }
+                form.reset();
             })
 
 
     }
 
 
+
+
     return (
         <div>
-
-
             <section className="container max-w-2xl mx-auto shadow-md md:w-3/4 bg-gray-100">
                 <div className="">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit}>
                         <div className="w-full max-w-2xl px-5 py-10 mx-auto m-10 bg-white rounded-lg shadow dark:bg-gray-800">
-
 
                             <div className=" mb-10 text-3xl ">
                                 <a className="flex items-center text-gray-700" href="#">
@@ -109,74 +96,132 @@ const AddTouristsSpot = () => {
                                 </a>
                                 <h1 className="text-4xl font-semibold text-center text-gray-900">Add Tourists Spot</h1>
                             </div>
-
-
-                            {/* input items here  */}
                             <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
 
+                                <div className="col-span-2 lg:col-span-1">
+                                    <div className=" relative ">
+                                        <select className="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="country_Name" required>
+                                            <option value="">
+                                                Country Name
+                                            </option>
+                                            <option value="Bangladesh">
+                                                Bangladesh
+                                            </option>
+                                            <option value="Thailand">
+                                                Thailand
+                                            </option>
+                                            <option value="Indonesia">
+                                                Indonesia
+                                            </option>
+                                            <option value="Malaysia">
+                                                Malaysia
+                                            </option>
+                                            <option value="Vietnam">
+                                                Vietnam
+                                            </option>
+                                            <option value="Cambodia">
+                                                Cambodia
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        {/* <div className="label">
-                                            <span className="label-text ml-3">What is your name?</span>
-                                        </div> */}
-                                        <input {...register("country_Name", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Country Name" />
-                                        {errors.country_Name && <span className="text-red-800 ml-2">Country Name is required</span>}
-                                    </div>
-                                </div>
-                                <div className="col-span-2 lg:col-span-1">
-                                    <div className=" relative ">
-                                        <input {...register("location", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location" />
-                                        {errors.location && <span className="text-red-800 ml-2">Location is required</span>}
+                                        <input type="text" name="location" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location" required />
                                     </div>
                                 </div>
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("tourists_spot_name", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Tourists Spot Name" />
-                                        {errors.tourists_spot_name && <span className="text-red-800 ml-2">Tourists Spot Name is required</span>}
+                                        <input type="text" name="tourists_spot_name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Tourists Spot Name" required />
                                     </div>
                                 </div>
+
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("locationImgLink", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" />
-                                        {errors.locationImgLink && <span className="text-red-800 ml-2">Location Img Link is required</span>}
+                                        <input type="text" name="locationImgLink" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Location Img Link" required />
                                     </div>
                                 </div>
 
 
                                 <div className="col-span-2">
                                     <label className="text-gray-700" >
-                                        <textarea {...register("shortDescription", { required: false })} className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Enter your short description" name="comment" rows="5" cols="40" >
+                                        <textarea className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Enter your short description" name="shortDescription" rows="5" cols="40" required>
                                         </textarea>
-                                        {/* {errors.shortDescription && <span className="text-red-800 ml-2">Short description is required</span>} */}
                                     </label>
                                 </div>
 
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("seasonality", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Which season is suitable ? " />
-                                        {errors.seasonality && <span className="text-red-800 ml-2">Season Name is required</span>}
+
+                                        <select className="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="seasonality" required>
+                                            <option value="">
+                                                Season
+                                            </option>
+                                            <option value="Summer">
+                                                Summer
+                                            </option>
+                                            <option value="Rainy-seasion">
+                                                Rainy-seasion
+                                            </option>
+                                            <option value="Autumn">
+                                                Autumn
+                                            </option>
+                                            <option value="Late-autumn">
+                                                Late-autumn
+                                            </option>
+                                            <option value="Winter">
+                                                Winter
+                                            </option>
+                                            <option value="Spring">
+                                                Spring
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("travel_time", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Travel Time" />
-                                        {errors.travel_time && <span className="text-red-800 ml-2">Travel Time is required</span>}
+                                        <select className="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="travel_time" required>
+                                            <option value="">
+                                                Open Days
+                                            </option>
+                                            <option value="1">
+                                                1
+                                            </option>
+                                            <option value="2">
+                                                2
+                                            </option>
+                                            <option value="3">
+                                                3
+                                            </option>
+                                            <option value="4">
+                                                4
+                                            </option>
+                                            <option value="5">
+                                                5
+                                            </option>
+                                            <option value="6">
+                                                6
+                                            </option>
+                                            <option value="7">
+                                                7
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("totalVisitorsPerYear", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Total Visitors Per Year" />
-                                        {errors.totalVisitorsPerYear && <span className="text-red-800 ml-2">Total Visitors Per Year</span>}
+                                        <input type="number" name="totalVisitorsPerYear" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Total Visitors Per Year" required />
                                     </div>
                                 </div>
+
+
                                 <div className="col-span-2 lg:col-span-1">
                                     <div className=" relative ">
-                                        <input {...register("average_cost", { required: true })} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Average Cost" />
-                                        {errors.average_cost && <span className="text-red-800 ml-2">Average Cost</span>}
+                                        <input type="number" name="average_cost" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#0f6780] focus:border-transparent" placeholder="Average Cost" required />
                                     </div>
                                 </div>
 

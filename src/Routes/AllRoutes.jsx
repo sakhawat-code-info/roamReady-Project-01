@@ -10,6 +10,7 @@ import ProtectedRoutes from "../Routes/ProtectedRoutes";
 import AddTouristsSpot from "../Pages/AddTouristsSpot";
 import UpdateTouristSpotDataPage from "../Pages/UpdateTouristSpotDataPage";
 import ViewDetailsPage from "../Pages/ViewDetailsPage";
+import Delete from "../Pages/Delete";
 
 
 
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: "/registerPage",
                 element: <RegisterPage></RegisterPage>,
+            },
+            {
+                path: "/delete",
+                element: <Delete></Delete>,
             },
         ],
     },

@@ -23,12 +23,6 @@ const ViewDetailsPage = () => {
 
 
 
-
-
-
-
-
-
     return (
         <div>
             <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:my-20">
