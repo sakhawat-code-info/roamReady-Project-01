@@ -14,7 +14,7 @@ const MyList = () => {
 
     // for load data through email 
     useEffect(() => {
-        fetch(`http://localhost:5000/myListData/${user.email}`)
+        fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/myListData/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setDataByEmail(data);
@@ -34,7 +34,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/singleDataDelete/${id}`, {
+                fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/singleDataDelete/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

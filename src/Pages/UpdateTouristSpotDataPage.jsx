@@ -65,7 +65,7 @@ const UpdateTouristSpotDataPage = () => {
 
         // console.log(updateTouristSpotData);
 
-        fetch(`http://localhost:5000/updateSingleData/${_id}`, {
+        fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/updateSingleData/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

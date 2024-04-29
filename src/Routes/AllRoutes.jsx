@@ -11,10 +11,10 @@ import AddTouristsSpot from "../Pages/AddTouristsSpot";
 import UpdateTouristSpotDataPage from "../Pages/UpdateTouristSpotDataPage";
 import ViewDetailsPage from "../Pages/ViewDetailsPage";
 import Delete from "../Pages/Delete";
+import CountryCard from "../Pages/CountryCard";
 
 
-
-
+// https://b9a10-server-side-sakhawat-code-info.vercel.app
 
 
 export const router = createBrowserRouter([
@@ -26,17 +26,17 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <App />,
-                loader: () => fetch('http://localhost:5000/addTouristSpotData'),
+                loader: () => fetch('https://b9a10-server-side-sakhawat-code-info.vercel.app/addTouristSpotData'),
             },
             {
                 path: "/allTouristsSpot",
                 element: <AllTouristsSpot />,
-                loader: () => fetch('http://localhost:5000/addTouristSpotData'),
+                loader: () => fetch('https://b9a10-server-side-sakhawat-code-info.vercel.app/addTouristSpotData'),
             },
             {
                 path: "/viewDetailsPage/:showDetails",
                 element: <ProtectedRoutes><ViewDetailsPage /></ProtectedRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/findSingleDataForUpdate/${params.showDetails}`)
+                loader: ({ params }) => fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/findSingleDataForUpdate/${params.showDetails}`)
             },
             {
                 path: "/addTouristsSpot",
@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
             {
                 path: "/updateTouristSpotDataPage/:needUpdateThisId",
                 element: <ProtectedRoutes><UpdateTouristSpotDataPage /></ProtectedRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/findSingleDataForUpdate/${params.needUpdateThisId}`)
+                loader: ({ params }) => fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/findSingleDataForUpdate/${params.needUpdateThisId}`)
             },
             {
                 path: "/myList",
@@ -63,6 +63,17 @@ export const router = createBrowserRouter([
                 path: "/delete",
                 element: <Delete></Delete>,
             },
+            {
+                path: "/countryCard",
+                element: <CountryCard />,
+            },
         ],
     },
 ]);
+
+
+// {
+//     path: "/country/:country",
+//     element: <CountryCard />,
+//     loader: ({ params }) => fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/country/${params.country}`)
+// },

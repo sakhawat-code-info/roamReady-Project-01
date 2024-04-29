@@ -9,15 +9,19 @@ const AllTouristsSpot = () => {
 
     const [allData, setAllData] = useState(touristDataFromDB);
 
-    console.log(allData)
+    // console.log(allData)
 
 
     const sortBy = (sortData) => {
+        console.log('checking', sortData);
+
 
         if (sortData === "average cost") {
             const sortByNumber = [].concat(allData).sort((a, b) => b.average_cost - a.average_cost);
             setAllData(sortByNumber);
         }
+
+
     };
 
 
@@ -39,12 +43,21 @@ const AllTouristsSpot = () => {
                             <select className="select select-bordered select-xs w-full max-w-xs">
                                 <option disabled selected>Sort</option>
                                 <option onClick={() => sortBy("average cost")}>Average Cost</option>
-                                <option>Tiny Orange</option>
-                                <option>Tiny Tomato</option>
                             </select>
                         </div>
                     </div>
                 </div>
+
+
+
+
+                <ul>
+                    <li onClick={() => sortBy("average cost")}></li>
+                </ul>
+
+
+
+
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 

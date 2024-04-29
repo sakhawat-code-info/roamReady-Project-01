@@ -19,7 +19,7 @@ const Delete = () => {
         }
 
         // console.log(addTouristSpotData);
-        fetch('http://localhost:5000/newrout', {
+        fetch('https://b9a10-server-side-sakhawat-code-info.vercel.app/newrout', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
