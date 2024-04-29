@@ -44,7 +44,7 @@ const Slider = () => {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper"
             >
-                {/* <SwiperSlide className='carousel-item relative '>
+                <SwiperSlide className=' relative '>
                     <img className='object-cover object-center' src="https://as2.ftcdn.net/v2/jpg/05/17/23/99/1000_F_517239905_MzDgpNvaS32i0XXmK4d1pnvWgmin4oAJ.jpg" alt="" />
 
 
@@ -57,9 +57,9 @@ const Slider = () => {
                         </div>
                     </div>
 
-                </SwiperSlide> */}
+                </SwiperSlide>
 
-                {/* <SwiperSlide className='carousel-item relative '>
+                <SwiperSlide className=' relative '>
                     <img className='object-cover object-center' src="https://as2.ftcdn.net/v2/jpg/03/14/52/85/1000_F_314528595_xSoa0stx9hYps3OS8Gxx4PwUVMZgaU5N.jpg" alt="" />
 
 
@@ -72,9 +72,9 @@ const Slider = () => {
                         </div>
                     </div>
 
-                </SwiperSlide> */}
-                {/* 
-                <SwiperSlide className='carousel-item relative '>
+                </SwiperSlide>
+
+                <SwiperSlide className='relative '>
                     <img className='object-cover object-center' src="https://as1.ftcdn.net/v2/jpg/01/24/23/74/1000_F_124237408_nK08MoSggkSZC03rmHKlWIjgy0wK2RBg.jpg" alt="" />
 
 
@@ -87,9 +87,9 @@ const Slider = () => {
                         </div>
                     </div>
 
-                </SwiperSlide> */}
+                </SwiperSlide>
 
-                <SwiperSlide className='carousel-item relative '>
+                <SwiperSlide className='relative '>
                     <img className='object-cover object-center' src="https://as2.ftcdn.net/v2/jpg/03/72/33/47/1000_F_372334710_sIRCcHdYB9sLdk8gyzvXWEouH4ZRoAtX.jpg" alt="" />
 
 

@@ -103,10 +103,33 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                {/* <div>
-                                    <button onClick={handleLoggingOut} className="btn btn-warning">Logout</button>
-                                </div> */}
 
+
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+
+
+
+                                        <a className="z-30" title={user?.displayName}>
+                                            <img
+                                                src={user?.photoURL ? user.photoURL : 'https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp'} alt="" className="object-cover  w-12 h-12 rounded-full dark:bg-gray-500" />
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div>
+
+                                    <button onClick={handleLoggingOut} className=" px-6 py-2  transition ease-in duration-200 uppercase rounded-full bg-red-800 hover:bg-gray-800 hover:text-white border-2 border-red-800 hover:border-gray-800 focus:outline-none">
+                                        Logout
+                                    </button>
+
+                                </div>
+
+
+
+
+                                {/* 
                                 <div className="flex items-center dropdown">
                                     <div className="relative ml-3">
                                         <div className="relative inline-block text-left">
@@ -118,7 +141,7 @@ const Navbar = () => {
                                                         </div>
                                                     }
 
-                                                    {/* https://source.unsplash.com/100x100/?portrait */}
+                                                   
 
                                                 </button>
                                             </div>
@@ -135,9 +158,6 @@ const Navbar = () => {
                                                                     </span>
                                                                 </>
                                                             }
-                                                            {/* <span>
-                                                                Settings
-                                                            </span> */}
                                                         </span>
                                                     </a>
                                                     <a href="#" className="block  px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
@@ -164,7 +184,7 @@ const Navbar = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                             </>
                             :

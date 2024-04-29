@@ -64,16 +64,10 @@ export const router = createBrowserRouter([
                 element: <Delete></Delete>,
             },
             {
-                path: "/countryCard",
+                path: "/countryCard/:countyName",
                 element: <CountryCard />,
+                loader: ({ params }) => fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/countryCard/${params.countyName}`)
             },
         ],
     },
 ]);
-
-
-// {
-//     path: "/country/:country",
-//     element: <CountryCard />,
-//     loader: ({ params }) => fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/country/${params.country}`)
-// },

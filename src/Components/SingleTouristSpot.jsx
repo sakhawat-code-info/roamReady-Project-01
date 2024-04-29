@@ -22,7 +22,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
                     <img className="w-full md:h-60" src={locationImgLink} alt="Sunset in the mountains" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
+                        <div className="font-bold text-xl mb-2 capitalize">{tourists_spot_name.slice(0, 25)} . . .</div>
                         {/* <p className="text-gray-700 text-base">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
                                     perferendis eaque, exercitationem praesentium nihil.
@@ -52,7 +52,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                                     </div>
                                 </div>
                                 <div className="font-medium dark:text-white">
-                                    {totalVisitorsPerYear}K+ Members
+                                    {totalVisitorsPerYear}K+
                                 </div>
                             </div>
                         </li>

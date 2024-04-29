@@ -5,7 +5,6 @@ import Countries from './Components/Countries'
 import LetsGoWithUs from './Components/LetsGoWithUs'
 import OurPartners from './Components/OurPartners'
 import QuickAns from './Components/QuickAns'
-import RecommendedBestPlaces from './Components/RecommendedBestPlaces'
 import SingleTouristSpot from './Components/SingleTouristSpot'
 import Slider from './Components/Slider/Slider'
 
@@ -52,10 +51,6 @@ function App() {
 
 
 
-
-      <div>
-        <RecommendedBestPlaces />
-      </div>
 
       <div>
         <QuickAns />

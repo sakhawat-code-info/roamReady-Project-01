@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const Countries = () => {
+
+    const [countries, setCountries] = useState([]);
+
+
+    useEffect(() => {
+        fetch('https://b9a10-server-side-sakhawat-code-info.vercel.app/countries')
+            .then(res => res.json())
+            .then(data => {
+                setCountries(data);
+            })
+    }, [])
+
+
+    // console.log(countries);
+
+
     return (
         <div>
             <div className="w-full p-4 bg-white">
@@ -17,34 +34,35 @@ const Countries = () => {
                 </div>
 
 
-
-
-
-
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
 
 
 
+                    {
+                        countries?.map(country => <Link to={`/countryCard/${country.country_Name}`} key={country._id}>
+                            <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                                <a href="#" className="block w-full h-full">
+                                    <img alt="blog photo" src={country.image} className="object-cover w-full h-72 p-1 bg-red-600" />
+                                    <div className="w-full p-4 bg-white dark:bg-gray-800">
 
-                    <Link to={'/countryCard'}>
-                        <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
-                            <a href="#" className="block w-full h-full">
-                                <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
-                                <div className="w-full p-4 bg-white dark:bg-gray-800">
+                                        <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
+                                            {country.country_Name}
+                                        </p>
+                                        <p className="font-light text-gray-400 dark:text-gray-300 text-md">
+                                            <span className="font-semibold">Best Places : </span>{country.shortDescription}
+                                        </p>
 
-                                    <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
-                                        Bangladesh
-                                    </p>
-                                    <p className="font-light text-gray-400 dark:text-gray-300 text-md">
-                                        <span className="font-semibold">Best Places : </span>Sundarban, Cox’s Bazar, Rangamati, Bandarban, Saint
-                                        Martin’s Island
-                                    </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </Link>)
+                    }
 
-                                </div>
-                            </a>
-                        </div>
-                    </Link>
 
+
+
+
+                    {/* 
                     <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
                         <a href="#" className="block w-full h-full">
                             <img alt="blog photo" src="https://media.istockphoto.com/id/1095885438/photo/the-bandra-worli-sea-link.jpg?s=1024x1024&w=is&k=20&c=VoTfOaohVt8OyE-_xSELqc1UKZ7d3Fwim3JAMYPKLV8=" className="object-cover w-full h-72 p-1 bg-red-600" />
@@ -127,7 +145,7 @@ const Countries = () => {
                             </div>
                         </a>
                     </div>
-
+ */}
 
 
 
