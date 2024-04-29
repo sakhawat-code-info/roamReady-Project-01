@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-
+import { CiLocationOn } from "react-icons/ci";
 
 
 const ViewDetailsPage = () => {
@@ -17,7 +17,6 @@ const ViewDetailsPage = () => {
         totalVisitorsPerYear,
         average_cost,
         userName,
-        userEmail,
         userCreatePostDateAndTime
     } = detailsData;
 
@@ -36,11 +35,13 @@ const ViewDetailsPage = () => {
                                         {country_Name}
                                     </p>
                                     <div className="flex space-x-2">
-                                        <a className="text-gray-900 bg-gray-100 badge hover:bg-gray-200" href="#">{location}</a>
+                                        <a className="text-gray-900 bg-gray-100 badge hover:bg-gray-200" href="#">
+                                            <CiLocationOn size={15} /> {location}
+                                        </a>
                                     </div>
                                 </div>
 
-                                <h4 className=" text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
+                                <h4 className=" text-2xl font-extrabold leading-8 text-gray-900 dark:text-white sm:text-3xl sm:leading-9 capitalize">
                                     {tourists_spot_name}
                                 </h4>
 
@@ -128,7 +129,7 @@ const ViewDetailsPage = () => {
                             </ul>
 
 
-                            <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
+                            <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300 normal-case">
                                 {shortDescription}
                             </p>
                         </div>
@@ -138,12 +139,12 @@ const ViewDetailsPage = () => {
                         <div className="relative mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
                             <div className="relative space-y-4">
                                 <div className="flex items-end justify-center space-x-4 lg:justify-start">
-                                    <img className="w-32 rounded-lg shadow-lg md:w-56" width="200" src={locationImgLink} alt="1" />
+                                    <img className="w-32 rounded-lg shadow-lg md:w-56 lg:h-72" width="200" src={locationImgLink} alt="1" />
                                     <img className="w-40 rounded-lg shadow-lg md:w-64" width="260" src="https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2023/07/travel-insurance-woman-on-boat.jpeg.jpg" alt="2" />
                                 </div>
                                 <div className="flex items-start justify-center ml-12 space-x-4 lg:justify-start">
                                     <img className="w-24 rounded-lg shadow-lg md:w-40" width="170" src="https://images.pexels.com/photos/2245436/pexels-photo-2245436.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="3" />
-                                    <img className="w-32 rounded-lg shadow-lg md:w-56" width="200" src="https://i.pinimg.com/736x/57/d9/12/57d912449af2ec54bb79f46780854abb.jpg" alt="4" />
+                                    <img className="w-32 rounded-lg shadow-lg md:w-56 lg:h-72" width="200" src="https://i.pinimg.com/736x/57/d9/12/57d912449af2ec54bb79f46780854abb.jpg" alt="4" />
                                 </div>
                             </div>
                         </div>
