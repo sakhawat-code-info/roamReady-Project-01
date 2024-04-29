@@ -57,7 +57,7 @@ const MyList = () => {
 
     }
 
-
+    let rowNum = 1;
 
 
 
@@ -72,8 +72,11 @@ const MyList = () => {
                             <table className="min-w-full leading-normal">
                                 <thead>
                                     <tr>
-                                        <th scope="col" className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200">
+                                        {/* <th scope="col" className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200">
                                             Date
+                                        </th> */}
+                                        <th scope="col" className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200">
+                                            SL.NO
                                         </th>
                                         <th scope="col" className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200">
                                             Country Name
@@ -103,14 +106,24 @@ const MyList = () => {
                                 </thead>
                                 <tbody>
 
+
+
                                     {
+
+
                                         dataByEmail?.map(singleData => <tr key={singleData._id}>
 
-                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                            {/* <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                                                 <p className="text-gray-900 whitespace-no-wrap">
                                                     {singleData.userCreatePostDateAndTime}
                                                 </p>
+                                            </td> */}
+                                            <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                <p className="text-gray-900 whitespace-no-wrap">
+                                                    {rowNum++}
+                                                </p>
                                             </td>
+
                                             <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                                                 <p className="text-gray-900 whitespace-no-wrap">
                                                     {singleData.country_Name}

@@ -45,7 +45,7 @@ const UpdateTouristSpotDataPage = () => {
         const average_cost = form.average_cost.value;
         const userName = user.displayName;
         const userEmail = user.email;
-        const userCreatePostDateAndTime = user.metadata.lastSignInTime;
+        const userCreatePostDateAndTime = new Date().toDateString();
 
 
         const updateTouristSpotData = {
@@ -63,7 +63,7 @@ const UpdateTouristSpotDataPage = () => {
             userCreatePostDateAndTime
         }
 
-        // console.log(updateTouristSpotData);
+        console.log(updateTouristSpotData);
 
         fetch(`https://b9a10-server-side-sakhawat-code-info.vercel.app/updateSingleData/${_id}`, {
             method: "PUT",

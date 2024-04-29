@@ -14,7 +14,6 @@ const AddTouristsSpot = () => {
 
 
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -31,7 +30,7 @@ const AddTouristsSpot = () => {
         const average_cost = form.average_cost.value;
         const userName = user.displayName;
         const userEmail = user.email;
-        const userCreatePostDateAndTime = user.metadata.lastSignInTime;
+        const userCreatePostDateAndTime = new Date().toDateString();
 
 
         const addTouristSpotData = {
