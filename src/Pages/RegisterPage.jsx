@@ -41,7 +41,7 @@ const RegisterPage = () => {
                     .then(() => {
 
                     }).catch((error) => {
-                        console.log(error)
+                        toast.error(error)
                     });
 
                 setUser(userInfo);
@@ -55,7 +55,7 @@ const RegisterPage = () => {
                 navigate('/loginPage');
             })
             .catch((error) => {
-                console.log(error.message);
+                toast.error(error.message);
                 // ..
             });
     }

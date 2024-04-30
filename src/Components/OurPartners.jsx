@@ -2,7 +2,7 @@
 const OurPartners = () => {
     return (
         <div>
-            <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
+            <section className="p-6 bg-white dark:text-gray-800">
                 <div className="container p-4 mx-auto text-center">
                     <h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>
                 </div>

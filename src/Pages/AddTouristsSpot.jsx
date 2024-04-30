@@ -49,7 +49,7 @@ const AddTouristsSpot = () => {
         }
 
         // console.log(addTouristSpotData);
-        fetch('http://localhost:5000/addTouristSpotData', {
+        fetch('https://b9a10-server-side-sakhawat-code-info.vercel.app/addTouristSpotData', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
