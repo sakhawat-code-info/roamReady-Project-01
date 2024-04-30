@@ -85,14 +85,14 @@ const CountryCard = () => {
 
 
                         {
-                            allSelectedCountryData?.map(singleCounty => <div key={singleCounty._id} className="px-2 py-20 w-full flex justify-center">
+                            allSelectedCountryData?.map(singleCounty => <div key={singleCounty._id} className="px-2 py-14 lg:py-20 w-full flex justify-center">
                                 <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
                                     <div className="lg:w-1/2">
                                         <div className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg" style={{ backgroundImage: `url(${singleCounty.locationImgLink})` }}
                                         >
                                         </div>
                                     </div>
-                                    <div className="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
+                                    <div className="py-4 lg:py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
                                         <h3 className="mb-1 text-slate-900 font-semibold">
                                             <span className="mb-1 block text-sm leading-6 text-indigo-500">{singleCounty.country_Name}</span>
                                         </h3>

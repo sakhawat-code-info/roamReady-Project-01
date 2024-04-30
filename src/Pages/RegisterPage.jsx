@@ -70,7 +70,7 @@ const RegisterPage = () => {
                     <div className="text-center lg:text-left">
                         <img className="h-20 w-20 rounded-full" src="https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp" alt="" />
                     </div>
-                    <div className="card shrink-0 w-[700px] shadow-2xl bg-base-100">
+                    <div className="card shrink-0 lg:w-[700px] shadow-2xl bg-base-100">
 
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <h1 className="mb-5 text-xl font-light text-left text-gray-800 sm:text-center">Register Now to our website today for free</h1>
