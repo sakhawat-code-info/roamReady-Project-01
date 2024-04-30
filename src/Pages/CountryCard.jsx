@@ -1,6 +1,10 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { TbCurrencyTaka } from "react-icons/tb";
+import { Typewriter } from 'react-simple-typewriter'
+
+
+
 
 const CountryCard = () => {
 
@@ -24,13 +28,65 @@ const CountryCard = () => {
 
 
 
+
+
+
     return (
         <div>
             <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
                 <div className="container p-4 mx-auto space-y-16 sm:p-10">
                     <div className="space-y-4 flex items-center justify-center flex-col">
-                        <h3 className="text-2xl font-bold leading-none sm:text-5xl"> {countryName.countyName} Best place</h3>
-                        <p className="max-w-2xl dark:text-gray-600 text-center">Discover one of the world most captivating destinations, where ancient wonders meet modern marvels, and breathtaking landscapes await at every turn. {countryName.countyName} is a treasure trove of history, culture, and natural beauty, offering visitors.</p>
+                        <h3 className="text-2xl font-bold leading-none sm:text-5xl capitalize"> {countryName.countyName}
+
+
+
+                            <Typewriter
+                                words={[' Is The Best place', ' For You To', ' Sleep', ' Code', ' Enjoy', " So Why you are waiting for lets go"]}
+                                loop={5}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+
+
+
+
+
+                        </h3>
+
+
+
+
+                        <p className="max-w-2xl dark:text-gray-600 text-center">
+
+                            <Typewriter
+                                words={[`Discover one of the world most captivating destinations, where ancient wonders meet modern marvels, and breathtaking landscapes await at every turn. ${countryName.countyName} is a treasure trove of history, culture, and natural beauty, offering visitors`]}
+                                loop={5}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+
+
+
+
+                        </p>
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                     <div className="grid w-full grid-cols-1 gap-2 ">
 

@@ -7,6 +7,7 @@ import OurPartners from './Components/OurPartners'
 import QuickAns from './Components/QuickAns'
 import SingleTouristSpot from './Components/SingleTouristSpot'
 import Slider from './Components/Slider/Slider'
+import PricingChart from './Components/PricingChart'
 
 
 function App() {
@@ -50,7 +51,9 @@ function App() {
       </div>
 
 
-
+      <div>
+        <PricingChart />
+      </div>
 
       <div>
         <QuickAns />
@@ -58,6 +61,7 @@ function App() {
       <div>
         <LetsGoWithUs></LetsGoWithUs>
       </div>
+
       <div>
         <OurPartners />
       </div>

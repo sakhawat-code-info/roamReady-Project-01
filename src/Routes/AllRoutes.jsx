@@ -12,6 +12,7 @@ import UpdateTouristSpotDataPage from "../Pages/UpdateTouristSpotDataPage";
 import ViewDetailsPage from "../Pages/ViewDetailsPage";
 import Delete from "../Pages/Delete";
 import CountryCard from "../Pages/CountryCard";
+import TramsAndCondition from "../Components/TramsAndCondition";
 
 
 // https://b9a10-server-side-sakhawat-code-info.vercel.app
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
             {
                 path: "/registerPage",
                 element: <RegisterPage></RegisterPage>,
+            },
+            {
+                path: "/termsAndConditions",
+                element: <TramsAndCondition />,
             },
             {
                 path: "/delete",

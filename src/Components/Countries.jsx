@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 
 const Countries = () => {
@@ -49,7 +50,21 @@ const Countries = () => {
                                             {country.country_Name}
                                         </p>
                                         <p className="font-light text-gray-400 dark:text-gray-300 text-md">
-                                            <span className="font-semibold">Best Places : </span>{country.shortDescription}
+                                            <span className="font-semibold">Best Places : </span>
+
+                                            <Typewriter
+                                                words={[`${country.shortDescription}`]}
+                                                loop={5}
+                                                cursor
+                                                cursorStyle='_'
+                                                typeSpeed={70}
+                                                deleteSpeed={50}
+                                                delaySpeed={1000}
+                                            />
+
+
+
+
                                         </p>
 
                                     </div>

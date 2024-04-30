@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Slider = () => {
@@ -33,7 +33,7 @@ const Slider = () => {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 9000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -51,8 +51,30 @@ const Slider = () => {
 
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white">
                         <div className="max-w-md text-left">
-                            <h1 className="mb-5 text-5xl font-bold">Discover Your Next Adventure</h1>
-                            <p className="mb-5">Bogalake, Bandarban, Bangladesh </p>
+                            <h1 className="mb-5 text-5xl font-bold">
+                                Discover Your
+                                <Typewriter
+                                    words={[' Next', ' Adventure']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </h1>
+
+                            <p className="mb-5">
+                                <Typewriter
+                                    words={['Bogalake', 'Bandarban', 'Bangladesh']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </p>
 
                         </div>
                     </div>
@@ -66,8 +88,28 @@ const Slider = () => {
 
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white">
                         <div className="max-w-md text-left">
-                            <h1 className="mb-5 text-5xl font-bold">Escape to Paradise</h1>
-                            <p className="mb-5">Kuala Lumpur, Malaysia </p>
+                            <h1 className="mb-5 text-5xl font-bold">
+
+                                <Typewriter
+                                    words={['Escape to Paradise']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </h1>
+                            <p className="mb-5">
+                                <Typewriter
+                                    words={['Kuala Lumpur, Malaysia']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                /> </p>
 
                         </div>
                     </div>
@@ -81,8 +123,32 @@ const Slider = () => {
 
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white">
                         <div className="max-w-md text-left">
-                            <h1 className="mb-5 text-5xl font-bold">Experience the Magic of Travel</h1>
-                            <p className="mb-5">Panorama view of Angkor Wat temple at sunset. Siem Reap, Cambodia </p>
+                            <h1 className="mb-5 text-5xl font-bold">
+
+                                <Typewriter
+                                    words={['Experience the Magic of Travel']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+
+                            </h1>
+                            <p className="mb-5">
+
+
+                                <Typewriter
+                                    words={['Panorama view of Angkor Wat temple at sunset, Siem Reap, Cambodia']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </p>
 
                         </div>
                     </div>
@@ -96,8 +162,33 @@ const Slider = () => {
 
                     <div className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 text-white">
                         <div className="max-w-md text-left">
-                            <h1 className="mb-5 text-5xl font-bold">Find Your Bliss in Travel</h1>
-                            <p className="mb-5">A panorama view along Orient beach in St Martin </p>
+                            <h1 className="mb-5 text-5xl font-bold">
+
+                                <Typewriter
+                                    words={['Find Your  Bliss in Travel']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+
+
+                            </h1>
+                            <p className="mb-5">
+                                <Typewriter
+                                    words={['  A panorama view along Orient beach in', ' St Martin ']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+
+
+                            </p>
 
                         </div>
                     </div>

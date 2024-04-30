@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -22,7 +23,10 @@ const Footer = () => {
 
                         <nav className="flex flex-col items-center justify-center flex-1 border-gray-100 md:items-end md:border-r md:pr-5">
                             <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
-                                Components
+
+                                <Link to={'/termsAndConditions'}>
+                                    Terms and conditions
+                                </Link>
                             </a>
                             <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
                                 Contacts

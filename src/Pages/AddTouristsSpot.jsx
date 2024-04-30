@@ -90,6 +90,8 @@ const AddTouristsSpot = () => {
                                     </div>
                                     <div className="ml-2">
                                         <p className="text-sm font-semibold text-gray-800">{user?.displayName}</p>
+
+                                        <p className="text-sm text-gray-500">{user?.email}</p>
                                         <p className="text-sm text-gray-500">{user?.metadata.lastSignInTime.slice(5, 17)}</p>
                                     </div>
                                 </a>
