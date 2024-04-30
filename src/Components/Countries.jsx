@@ -43,7 +43,7 @@ const Countries = () => {
                         countries?.map(country => <Link to={`/countryCard/${country.country_Name}`} key={country._id}>
                             <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
                                 <a href="#" className="block w-full h-full">
-                                    <img alt="blog photo" src={country.image} className="object-cover w-full h-72 p-1 bg-red-600" />
+                                    <img alt="blog photo" src={country.image} className="object-cover w-full h-72 bg-white" />
                                     <div className="w-full p-4 bg-white dark:bg-gray-800">
 
                                         <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">

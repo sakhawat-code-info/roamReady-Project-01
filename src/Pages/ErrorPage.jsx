@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import lootoImg from '../assets/lotti.json'
+import notFound from '../assets/notFound.json'
+
 
 const ErrorPage = () => {
     return (
@@ -11,24 +13,23 @@ const ErrorPage = () => {
                 </div>
                 <div className="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
                     <div className="relative z-10 flex flex-col items-center w-full font-mono">
-                        <p className="font-extrabold text-white text-8xl animate-bounce">
+                        {/* <p className="font-extrabold text-white text-8xl animate-bounce">
                             404
-                        </p>
-                        <h1 className="mb-20 text-5xl font-extrabold leading-tight text-center text-white">
+                        </p> */}
+                        <div className="w-40 h-40">
+                            <Lottie animationData={notFound} />
+                        </div>
+
+                        <h1 className=" mb-10 text-5xl font-extrabold leading-tight text-center text-white">
                             You&#x27;re alone here
                         </h1>
 
-
-
+                        {/* 
                         <div className="w-40 h-40">
                             <Lottie animationData={lootoImg} />
                         </div>
 
-
-
-
-
-
+ */}
 
                         <div className="flex gap-48">
                             <Link to={'/'} className="w-full mb-2 btn btn-lg btn-light sm:w-auto sm:mb-0">Go to Back</Link>

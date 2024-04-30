@@ -16,13 +16,13 @@ function App() {
 
 
   return (
-    <>
+    <div className='bg-base-200'>
       <div className='m-10'>
         <Slider />
       </div>
 
-      <div>
-        <div className="flex items-end justify-between mb-3 header">
+      <div className='my-4 lg:my-20'>
+        <div className="flex items-center justify-center header">
           <div className="title">
             <p className="mb-4 text-4xl font-bold text-gray-800">
               Tourists Spots
@@ -44,28 +44,26 @@ function App() {
         </div>
       </div>
 
-
-
-      <div>
+      <div className=''>
         <Countries />
       </div>
 
 
-      <div>
+      <div className=''>
         <PricingChart />
-      </div>
-
-      <div>
-        <QuickAns />
       </div>
       <div>
         <LetsGoWithUs></LetsGoWithUs>
       </div>
+      <div>
+        <QuickAns />
+      </div>
+
 
       <div>
         <OurPartners />
       </div>
-    </>
+    </div>
   )
 }
 

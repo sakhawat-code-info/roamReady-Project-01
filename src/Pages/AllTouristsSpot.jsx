@@ -32,15 +32,15 @@ const AllTouristsSpot = () => {
                         <span className="block">
                             All Tourists Spot
                         </span>
-                        <span className="block text-indigo-500">
+                        {/* <span className="block text-indigo-500">
                             It&#x27;s.
-                        </span>
+                        </span> */}
                     </h2>
                     <div className="lg:mt-0 lg:flex-shrink-0">
 
 
                         <div className="dropdown dropdown-end ">
-                            <div tabIndex={0} role="button" className="btn m-1">Sort</div>
+                            <div tabIndex={0} role="button" className="btn border-[#0f6780]">Sort</div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-24">
                                 <li onClick={() => sortBy("averageCost")}>Sort By Price </li>
                             </ul>
@@ -62,9 +62,6 @@ const AllTouristsSpot = () => {
                             SingleTouristSpotData={SingleTouristSpotData}
                         ></SingleTouristSpot>)
                     }
-
-
-
 
 
                 </div>

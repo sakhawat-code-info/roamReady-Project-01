@@ -29,11 +29,15 @@ const Footer = () => {
                                 </Link>
                             </a>
                             <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
-                                Contacts
+
+                                <Link to={'/ourTeams'}>
+                                    Contacts
+                                </Link>
                             </a>
-                            <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
+
+                            {/* <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
                                 Customization
-                            </a>
+                            </a> */}
                         </nav>
 
                         <div className="h-px mx-auto mt-4 rounded-full md:hidden w-11">

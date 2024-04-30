@@ -2,13 +2,13 @@
 const TramsAndCondition = () => {
     return (
         <div>
-            <section className="px-4 py-24 mx-auto max-w-7xl">
+            <section className="px-4 lg:px-44 py-24 container mx-auto max-w-7xl">
                 <div className="mb-24 text-left md:text-center">
                     <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">Privacy Policy</h1>
-                    <p className="mb-5 text-base text-gray-500 md:text-lg">Last updated: 20th Dec 2020</p>
+                    <p className="mb-5 text-base text-gray-500 md:text-lg">Last updated: 30th April 2024</p>
                 </div>
                 <div className="mx-auto prose">
-                    <h2 id="1legalnotices">1. Legal Notices</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">1. Legal Notices</h2>
 
                     <p>We, the Operators of this Website, provide it as a public service to our users.</p>
 
@@ -28,7 +28,7 @@ const TramsAndCondition = () => {
                         incorporated by reference, contain the entire agreement (the “Agreement”) between you and the Operators with respect to the Website. Any rights not expressly granted herein are reserved.
                     </p>
 
-                    <h2 id="2permittedandprohibiteduses">2. Permitted and Prohibited Uses</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">2. Permitted and Prohibited Uses</h2>
 
                     <p>
                         You may use the the Website for the sole purpose of sharing and exchanging ideas with other Users. You may not use the the Website to violate any applicable local, state, national, or
@@ -72,7 +72,7 @@ const TramsAndCondition = () => {
                         cooperate with any authorities investigating violations of these laws.
                     </p>
 
-                    <h2 id="3usersubmissions">3 User Submissions</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">3 User Submissions</h2>
 
                     <p>
                         The Operators do not want to receive confidential or proprietary information from you through the Website. Any material, information, or other communication you transmit or post
@@ -86,7 +86,7 @@ const TramsAndCondition = () => {
                         permission from your employer.
                     </p>
 
-                    <h2 id="4userdiscussionlistsandforums">4. User Discussion Lists and Forums</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">4. User Discussion Lists and Forums</h2>
 
                     <p>
                         The Operators may, but are not obligated to, monitor or review any areas on the Website where users transmit or post communications or communicate solely with each other, including but not
@@ -94,7 +94,7 @@ const TramsAndCondition = () => {
                         not arising under the laws of copyright, libel, privacy, obscenity, or otherwise. The Operators may edit or remove content on the the Website at their discretion at any time.
                     </p>
 
-                    <h2 id="5useofpersonallyidentifiableinformation">5. Use of Personally Identifiable Information</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">5. Use of Personally Identifiable Information</h2>
 
                     <p>Information submitted to the Website is governed according to the Operators’s current Privacy Policy and the stated license of this website.</p>
 
@@ -116,7 +116,7 @@ const TramsAndCondition = () => {
                         information in your account, please visit our Privacy Policy.
                     </p>
 
-                    <h2 id="6indemnification">6. Indemnification</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">6. Indemnification</h2>
 
                     <p>
                         You agree to defend, indemnify and hold harmless the Operators, agents, vendors or suppliers from and against any and all claims, damages, costs and expenses, including reasonable attorneys'
@@ -124,7 +124,7 @@ const TramsAndCondition = () => {
                         or user of your account, of any intellectual property right or other right of any person or entity.
                     </p>
 
-                    <h2 id="7termination">7. Termination</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">7. Termination</h2>
 
                     <p>
                         These Terms and Conditions of Use are effective until terminated by either party. If you no longer agree to be bound by these Terms and Conditions, you must cease use of the Website. If you are
@@ -134,7 +134,7 @@ const TramsAndCondition = () => {
                         are in violation of these Terms and Conditions of Use.
                     </p>
 
-                    <h2 id="8warrantydisclaimer">8. WARRANTY DISCLAIMER</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">8. WARRANTY DISCLAIMER</h2>
 
                     <p>
                         THE WEBSITE AND ASSOCIATED MATERIALS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE FULL EXTENT PERMISSIBLE BY APPLICABLE LAW, THE OPERATORS DISCLAIM ALL WARRANTIES, EXPRESS OR
@@ -172,7 +172,7 @@ const TramsAndCondition = () => {
                         LIMITATIONS ON LIABILITY ARE AN ESSENTIAL BASIS OF THE BARGAIN AND THAT THE OPERATORS WOULD NOT PROVIDE THE WEBSITE ABSENT SUCH LIMITATION.
                     </p>
 
-                    <h2 id="9general">9. General</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">9. General</h2>
 
                     <p>
                         The Website is hosted in the United States. The Operators make no claims that the Content on the Website is appropriate or may be downloaded outside of the United States. Access to the Content
@@ -190,7 +190,7 @@ const TramsAndCondition = () => {
                         waiver of a breach of any provision of this Agreement shall not be construed as a waiver of any other or subsequent breach.
                     </p>
 
-                    <h2 id="10linkstoothermaterials">10. Links to Other Materials</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">10. Links to Other Materials</h2>
 
                     <p>
                         The Website may contain links to sites owned or operated by independent third parties. These links are provided for your convenience and reference only. We do not control such sites and,
@@ -201,7 +201,7 @@ const TramsAndCondition = () => {
                         material contained in third party sites, and you hereby irrevocably waive any claim against us with respect to such sites.
                     </p>
 
-                    <h2 id="11notificationofpossiblecopyrightinfringement">11. Notification Of Possible Copyright Infringement</h2>
+                    <h2 className="text-2xl font-extrabold mt-6 mb-2">11. Notification Of Possible Copyright Infringement</h2>
 
                     <p>In the event you believe that material or content published on the Website may infringe on your copyright or that of another, please <a href="#">Contact Us</a>.</p>
                 </div>
