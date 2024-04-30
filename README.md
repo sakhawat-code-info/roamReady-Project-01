@@ -12,9 +12,9 @@ for submission
 
 
 - Assignment Requirement Type: B9 A10 Type-01 Requirements
-- Client-side code GitHub repository : 
-- Server-side code GitHub repository : 
-- Live website URL link : 
+- Client-side code GitHub repository : https://github.com/programming-hero-web-course-4/B9A10-client-side-sakhawat-code-info
+- Server-side code GitHub repository : https://github.com/programming-hero-web-course-4/b9a10-server-side-sakhawat-code-info
+- Live website URL link : https://b9a10-client-side.web.app/
 
 
 
@@ -23,26 +23,26 @@ for submission
 
 
 - Assignment Requirement Type: B9 A10 Type-01 Requirements
-- Website Name : Land Rent
-- Live site URL : https://b9a9-real-estate-project.web.app/
-- Code Link : https://github.com/programming-hero-web-course-4/b9a9-real-estate-sakhawat-code-info
+- Website Name : Roam Ready
+- Category's name : Bangladesh, Thailand, Indonesia, Malaysia, Vietnam, Cambodia,
 
 
 - Features : 
     -> Home page
-    -> Update profile
+    -> Add data page
+    -> update and delete page
     -> User Profile
     -> Contract us page
-    -> Sign In
+    -> Sign In, Login page, 
+    -> Google login system, Github also
 
 - Characteristics : 
     -> User-friendly Interface
     -> Comprehensive Database
     -> Advanced Functionality
     -> Detailed Pages
-    -> Privacy and protected
+    -> Privacy and protected information
 
 - npm packages used: 
-    -> Animate.css
-    -> React Hook form
-    -> Swiper slider
+    -> Lottie React
+    -> React-simple-typewriter

@@ -78,7 +78,7 @@ const Navbar = () => {
                     <Link to={'/'} className="btn btn-ghost text-xl">
 
                         <div className="flex items-center justify-center gap-4">
-                            <img className="h-12 w-12 rounded-full" src="https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp" alt="" />
+                            <img className="h-12 w-12 rounded-full hidden md:flex" src="https://r2.erweima.ai/imgcompressed/compressed_0256073c49c71077d0e96e412aa4d94d.webp" alt="" />
                             <h1 className=" md:text-3xl">
 
                                 <Typewriter
@@ -136,7 +136,7 @@ const Navbar = () => {
                             <>
 
 
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div tabIndex={0} role="button" className="hidden md:flex btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
 
 
@@ -238,7 +238,7 @@ const Navbar = () => {
                             </>
                     }
 
-                    <div>
+                    <div className="hidden md:flex">
                         <label className="swap swap-rotate">
 
                             {/* this hidden checkbox controls the state onChange={handleTheme} */}

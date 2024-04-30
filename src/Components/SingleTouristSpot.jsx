@@ -18,9 +18,9 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
 
     return (
         <div>
-            <div className="flex px-3 py-3">
-                <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                    <img className="w-full md:h-60" src={locationImgLink} alt="Sunset in the mountains" />
+            <div className="flex px-3 py-3 dark:bg-gray-50 dark:text-gray-800">
+                <div className="w-full rounded overflow-hidden shadow-lg">
+                    <img className="w-full md:h-60 object-cover" src={locationImgLink ? locationImgLink : "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"} alt="Image not available" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2 capitalize">{tourists_spot_name.slice(0, 25)} . . .</div>
                         {/* <p className="text-gray-700 text-base">
@@ -38,7 +38,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                                         Season
                                     </div>
                                 </div>
-                                <div className="font-medium dark:text-white">
+                                <div className="font-medium dark:text-white \">
                                     {seasonality}
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ const SingleTouristSpot = ({ SingleTouristSpotData }) => {
                         </li>
                     </ul>
 
-                    <div className="px-6 py-4 flex items-center justify-center">
+                    <div className="px-6 py-4 flex items-center justify-center ">
                         <Link to={`/viewDetailsPage/${_id}`}>
                             <button className=" px-6 py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                                 View Details

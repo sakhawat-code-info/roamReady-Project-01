@@ -16,12 +16,12 @@ function App() {
 
 
   return (
-    <div className='bg-base-200'>
+    <div className='bg-base-200 dark:bg-gray-50 dark:text-gray-800'>
       <div className='m-10'>
         <Slider />
       </div>
 
-      <div className='my-4 lg:my-20'>
+      <div className='my-4 lg:my-20 dark:bg-gray-50 dark:text-gray-800'>
         <div className="flex items-center justify-center header">
           <div className="title">
             <p className="mb-4 text-4xl font-bold text-gray-800">

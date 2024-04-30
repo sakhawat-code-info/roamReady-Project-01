@@ -14,6 +14,7 @@ import Delete from "../Pages/Delete";
 import CountryCard from "../Pages/CountryCard";
 import TramsAndCondition from "../Components/TramsAndCondition";
 import OurTeams from "../Components/OurTeams";
+import ContractUs from "../Components/ContractUs";
 
 
 // https://b9a10-server-side-sakhawat-code-info.vercel.app
@@ -66,8 +67,8 @@ export const router = createBrowserRouter([
                 element: <TramsAndCondition />,
             },
             {
-                path: "/delete",
-                element: <Delete></Delete>,
+                path: "/contractUs",
+                element: <ContractUs />,
             },
             {
                 path: "/ourTeams",

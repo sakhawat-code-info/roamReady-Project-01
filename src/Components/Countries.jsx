@@ -22,7 +22,7 @@ const Countries = () => {
 
     return (
         <div>
-            <div className="w-full p-4 bg-white">
+            <div className="w-full p-4 bg-white dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex items-end justify-between mb-3 header">
                     <div className="title">
                         <p className="mb-4 text-4xl font-bold text-gray-800">
@@ -35,13 +35,13 @@ const Countries = () => {
                 </div>
 
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 dark:bg-gray-50 dark:text-gray-800">
 
 
 
                     {
                         countries?.map(country => <Link to={`/countryCard/${country.country_Name}`} key={country._id}>
-                            <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full">
+                            <div className="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer sm:h-full sm:w-full md:w-full dark:bg-gray-50 dark:text-gray-800">
                                 <a href="#" className="block w-full h-full">
                                     <img alt="blog photo" src={country.image} className="object-cover w-full h-72 bg-white" />
                                     <div className="w-full p-4 bg-white dark:bg-gray-800">
