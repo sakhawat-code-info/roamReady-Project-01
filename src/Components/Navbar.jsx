@@ -222,7 +222,7 @@ const Navbar = () => {
                             <>
                                 <div>
                                     <Link to={"/loginPage"}>
-                                        <button className=" px-6 py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                                        <button className="px-2 py-2 md:px-6 md:py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                                             Login
                                         </button>
                                     </Link>
@@ -230,7 +230,7 @@ const Navbar = () => {
 
                                 <div>
                                     <Link to={"/registerPage"}>
-                                        <button className=" px-6 py-2  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                                        <button className=" px-2 py-2 md:px-6  transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                                             Register
                                         </button>
                                     </Link>

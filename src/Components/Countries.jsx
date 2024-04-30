@@ -57,7 +57,7 @@ const Countries = () => {
                                                 loop={5}
                                                 cursor
                                                 cursorStyle='_'
-                                                typeSpeed={70}
+                                                typeSpeed={240}
                                                 deleteSpeed={50}
                                                 delaySpeed={1000}
                                             />

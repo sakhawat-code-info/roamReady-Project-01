@@ -41,11 +41,11 @@ const CountryCard = () => {
 
 
                             <Typewriter
-                                words={[' Is The Best place', ' For You To', ' Sleep', ' Code', ' Enjoy', " So Why you are waiting for lets go"]}
+                                words={[' Is The Best place', ' For You To', ' think', ' Code', ' Enjoy', " So Why you are waiting for lets go"]}
                                 loop={5}
                                 cursor
                                 cursorStyle='_'
-                                typeSpeed={70}
+                                typeSpeed={340}
                                 deleteSpeed={50}
                                 delaySpeed={1000}
                             />
