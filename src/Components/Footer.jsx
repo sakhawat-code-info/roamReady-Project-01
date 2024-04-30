@@ -22,24 +22,23 @@ const Footer = () => {
                         </div>
 
                         <nav className="flex flex-col items-center justify-center flex-1 border-gray-100 md:items-end md:border-r md:pr-5">
-                            <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
 
-                                <Link to={'/termsAndConditions'}>
-                                    Terms and conditions
-                                </Link>
-                            </a>
-                            <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
 
-                                <Link to={'/ourTeams'}>
-                                    Our teams
-                                </Link>
-                            </a>
-                            <a aria-current="page" href="#" className="hover:text-gray-700 dark:hover:text-white">
+                            <Link to={'/termsAndConditions'} className="hover:text-gray-700 dark:hover:text-white">
+                                Terms and conditions
+                            </Link>
 
-                                <Link to={'/contractUs'}>
-                                    Contact Us
-                                </Link>
-                            </a>
+
+                            <Link to={'/ourTeams'} className="hover:text-gray-700 dark:hover:text-white">
+                                Our teams
+                            </Link>
+
+
+
+                            <Link to={'/contractUs'} className="hover:text-gray-700 dark:hover:text-white">
+                                Contact Us
+                            </Link>
+
 
 
                         </nav>
@@ -80,7 +79,7 @@ const Footer = () => {
                                 </button>
 
                             </a>
-                            <a href="#">
+                            <a href="https://www.facebook.com/">
                                 <span className="sr-only">Facebook</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" className="w-5 h-5" aria-hidden="true">
                                     <path
